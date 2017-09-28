@@ -1,0 +1,10 @@
+<%= form_tag(game_path, method: "get") do %>
+<h1>The Longest Word</h1>
+<h2>Game setting: </h2>
+<h3>How many letters would you like to have</h3>
+  <%= label_tag(:grid,"") %>
+  <%= select_tag(:grid_size, options_for_select([['7 letters', 7], ['8 letters', 8],['9 letters', 9], ['10 letters', 10]])) %>
+  <%= submit_tag("submit") %>
+<% end %>
+
+

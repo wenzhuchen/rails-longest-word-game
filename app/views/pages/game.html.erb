@@ -1,0 +1,15 @@
+<h1>The Longest Word</h1>
+
+<h3>Your grid is</h3>
+<h4><strong><%=" #{@grid}"%></strong></h4>
+<%= link_to "change my grid", grid_path %>
+
+<p>What is your best word?</p>
+<p><%= @start_time %></p>
+
+<%= form_tag(score_path, method: "get") do %>
+  <%= text_field_tag(:player_answer) %>
+  <%= submit_tag("let's try") %>
+  <%= hidden_field_tag(:start_time, @start_time) %>
+  <%= hidden_field_tag(:grid, @grid) %>
+<% end %>
